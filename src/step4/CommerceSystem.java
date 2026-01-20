@@ -5,11 +5,11 @@ import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
-
 public class CommerceSystem {
-    List<Category> categories;
-    Scanner scanner;
-    DecimalFormat formatter;
+
+    private List<Category> categories;
+    private Scanner scanner;
+    private DecimalFormat formatter;
 
     public CommerceSystem(List<Category> categories) {
         this.categories = categories;
@@ -50,9 +50,9 @@ public class CommerceSystem {
             List<Product> products = category.getProducts();
             for (int i = 0; i < products.size(); i++) {
                 Product product = products.get(i);
-                String formattedPrice = String.format("%,10d", product.price);
-                System.out.println((i + 1) + ". " + String.format("%-14s", product.name)
-                        + " |" + formattedPrice + "원 | " + product.description);
+                String formattedPrice = String.format("%,10d", product.getPrice());
+                System.out.println((i + 1) + ". " + String.format("%-14s", product.getName())
+                        + " |" + formattedPrice + "원 | " + product.getDescription());
             }
             System.out.println("0. 뒤로가기");
 
@@ -63,9 +63,9 @@ public class CommerceSystem {
                 break;
             } else if (choice >= 1 && choice <= products.size()) {
                 Product selected = products.get(choice - 1);
-                System.out.println("선택한 상품: " + selected.name + " | "
-                        + formatter.format(selected.price) + "원 | "
-                        + selected.description + " | 재고: " + selected.stock + "개");
+                System.out.println("선택한 상품: " + selected.getName() + " | "
+                        + formatter.format(selected.getPrice()) + "원 | "
+                        + selected.getDescription() + " | 재고: " + selected.getStock() + "개");
             }
         }
     }
@@ -83,5 +83,9 @@ public class CommerceSystem {
                 scanner.nextLine();
             }
         }
+    }
+
+    public List<Category> getCategories() {
+        return categories;
     }
 }
