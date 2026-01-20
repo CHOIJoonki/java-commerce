@@ -1,6 +1,5 @@
 package step3;
 
-import step2.Product;
 
 import java.text.DecimalFormat;
 import java.util.InputMismatchException;
