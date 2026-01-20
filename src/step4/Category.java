@@ -5,8 +5,9 @@ import java.util.List;
 
 
 public class Category {
-    String categoryName;
-    List<Product> products;
+
+    private String categoryName;
+    private List<Product> products;
 
     public Category(String categoryName) {
         this.categoryName = categoryName;
@@ -23,5 +24,9 @@ public class Category {
 
     public List<Product> getProducts() {
         return products;
+    }
+
+    public void setCategoryName(String categoryName) {
+        this.categoryName = categoryName;
     }
 }
