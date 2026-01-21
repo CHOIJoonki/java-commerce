@@ -29,7 +29,6 @@ public class Cart {
                 .collect(Collectors.toList());
     }
 
-    // 스트림을 활용한 총 금액 계산
     public int getTotalPrice() {
         return items.stream()
                 .mapToInt(CartItem::getTotalPrice)
