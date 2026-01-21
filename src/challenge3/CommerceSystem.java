@@ -345,7 +345,7 @@ public class CommerceSystem {
                 }
             }
 
-            cart.removeItem(product);
+            cart.removeItem(name);
 
             System.out.println();
             System.out.println(name + " 상품이 삭제되었습니다.");
