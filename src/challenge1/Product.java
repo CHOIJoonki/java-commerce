@@ -1,7 +1,6 @@
 package challenge1;
 
 public class Product {
-
     private String name;
     private int price;
     private String description;
@@ -12,6 +11,10 @@ public class Product {
         this.price = price;
         this.description = description;
         this.stock = stock;
+    }
+
+    public void decreaseStock(int quantity) {
+        this.stock -= quantity;
     }
 
     public String getName() {
