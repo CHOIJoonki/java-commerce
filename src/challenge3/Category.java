@@ -59,7 +59,4 @@ public class Category {
         return products;
     }
 
-    public void setCategoryName(String categoryName) {
-        this.categoryName = categoryName;
-    }
 }
