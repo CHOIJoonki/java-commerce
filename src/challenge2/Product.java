@@ -1,10 +1,11 @@
 package challenge2;
 
 public class Product {
-    private String name;
-    private int price;
-    private String description;
-    private int stock;
+
+    private String name;        // 상품명
+    private int price;          // 가격
+    private String description; // 설명
+    private int stock;          // 재고수량
 
     public Product(String name, int price, String description, int stock) {
         this.name = name;

@@ -21,6 +21,10 @@ public class Cart {
         items.add(new CartItem(product, quantity));
     }
 
+    public void removeItem(Product product) {
+        items.removeIf(item -> item.getProduct().getName().equals(product.getName()));
+    }
+
     public int getTotalPrice() {
         int total = 0;
         for (CartItem item : items) {
